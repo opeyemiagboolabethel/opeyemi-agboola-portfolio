@@ -1,0 +1,9 @@
+{
+  "name":"Opeyemi O. Agboola Portfolio",
+  "short_name":"Opeyemi Agboola",
+  "start_url":"/",
+  "display":"standalone",
+  "background_color":"#f6f2e9",
+  "theme_color":"#071726",
+  "icons":[]
+}

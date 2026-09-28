@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Maternal Continuum of Care in Nigeria | Opeyemi O. Agboola</title>
+<meta name="description" content="Health-data analytics case study using the 2024 Nigeria Demographic and Health Survey, R, PostgreSQL/SQL and Power BI."/>
+<meta name="theme-color" content="#071726"/>
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../css/styles.css"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="../index.html"><strong>Opeyemi O. Agboola, MPH, MBA</strong><span>Health Data · Research · Decision Intelligence</span></a>
+    <nav class="desktop-nav" aria-label="Primary"><a href="../index.html#work">Work</a><a href="../index.html#expertise">Expertise</a><a href="../index.html#profile">About</a><a href="../index.html#research">Research</a></nav>
+    <div class="nav-actions"><a class="btn btn-dark-outline btn-small" href="../assets/docs/Opeyemi_Agboola_CV.docx">Download CV ↓</a></div>
+    <button class="menu-toggle" data-menu-toggle aria-expanded="false" aria-label="Open menu"><span></span><span></span></button>
+  </div>
+  <nav class="mobile-nav" data-mobile-nav aria-label="Mobile"><a href="../index.html#work">Work</a><a href="../index.html#expertise">Expertise</a><a href="../index.html#profile">About</a><a href="../index.html#research">Research</a></nav>
+</header>
+
+<main>
+<section class="case-hero">
+  <div class="container">
+    <a class="case-back" href="../index.html#work">← Back to selected work</a>
+    <p class="eyebrow" style="margin-top:28px">Health data analytics · maternal health · Nigeria</p>
+    <h1>Maternal Continuum of Care in Nigeria</h1>
+    <p class="hero-lede">An end-to-end analysis of how women move from antenatal care through skilled delivery and early postnatal care, using the 2024 Nigeria Demographic and Health Survey.</p>
+    <div class="case-meta"><span>2024 NDHS</span><span>10,522 births</span><span>36 states + FCT</span><span>R + PostgreSQL/SQL + Power BI</span><span>Complex survey analysis</span></div>
+  </div>
+</section>
+
+<section class="section section-white"><div class="container case-grid">
+  <div><p class="section-kicker">Decision problem</p><h2>Individual indicators can hide losses across the full care pathway.</h2></div>
+  <div class="case-body">
+    <p>Maternal care is not a single contact with the health system. A woman may begin antenatal care but fail to receive enough contacts, deliver without skilled attendance, or miss timely postnatal care.</p>
+    <p>The project asks how much of the pathway is completed nationally, where the largest drop-offs occur, how unequal completion is across socioeconomic and geographic groups, and which characteristics remain associated with completion after adjustment.</p>
+    <p class="case-note"><strong>Primary outcome:</strong> at least four antenatal care contacts, skilled birth attendance, and early postnatal care for both mother and newborn within two days of birth.</p>
+  </div>
+</div></section>
+
+<section class="section section-dark"><div class="container">
+  <p class="section-kicker">Executive view</p><h2 class="display">Only one in four completed the primary continuum.</h2>
+  <div class="kpi-grid">
+    <div class="kpi"><strong>73.7%</strong><span>Any antenatal care</span></div>
+    <div class="kpi"><strong>53.6%</strong><span>Four or more ANC contacts</span></div>
+    <div class="kpi"><strong>45.1%</strong><span>Skilled birth attendance</span></div>
+    <div class="kpi"><strong>24.5%</strong><span>Complete primary continuum</span></div>
+  </div>
+</div></section>
+
+<section class="section"><div class="container">
+  <p class="section-kicker">Analytical architecture</p><h2 class="display">From restricted microdata to a governed reporting layer.</h2>
+  <p class="section-intro">The workflow separates respondent-level analysis from public reporting outputs so the project remains reproducible without distributing restricted DHS microdata.</p>
+  <div class="arch">
+    <div><b>01</b><strong>R: import, audit & cohort derivation</strong></div>
+    <div><b>02</b><strong>Survey-weighted national, equity & geographic analysis</strong></div>
+    <div><b>03</b><strong>Regression & sensitivity analysis</strong></div>
+    <div><b>04</b><strong>PostgreSQL staging, analytics & reporting views</strong></div>
+    <div><b>05</b><strong>Power BI semantic model & reporting</strong></div>
+  </div>
+</div></section>
+
+<section class="section section-white"><div class="container">
+  <p class="section-kicker">Findings</p><h2 class="display">The national average hides substantial dropout and inequality.</h2>
+
+  <article class="finding">
+    <div><span class="finding-label">01 / Continuum dropout</span><h3>Coverage falls at every stage.</h3></div>
+    <div>
+      <div class="mini-bars">
+        <div class="mini-row"><span>Any ANC</span><div class="mini-track"><div class="mini-fill" style="width:73.7%"></div></div><strong>73.7%</strong></div>
+        <div class="mini-row"><span>ANC4+</span><div class="mini-track"><div class="mini-fill" style="width:53.6%"></div></div><strong>53.6%</strong></div>
+        <div class="mini-row"><span>Skilled birth</span><div class="mini-track"><div class="mini-fill" style="width:45.1%"></div></div><strong>45.1%</strong></div>
+        <div class="mini-row"><span>Paired early PNC</span><div class="mini-track"><div class="mini-fill" style="width:38.1%"></div></div><strong>38.1%</strong></div>
+        <div class="mini-row"><span>Complete continuum</span><div class="mini-track"><div class="mini-fill" style="width:24.5%"></div></div><strong>24.5%</strong></div>
+      </div>
+      <p class="case-note"><strong>Interpretation:</strong> measuring individual service contacts alone can overstate continuity across the full maternal-care pathway.</p>
+    </div>
+  </article>
+
+  <article class="finding">
+    <div><span class="finding-label">02 / Equity</span><h3>Completion gaps are wide across social and geographic groups.</h3></div>
+    <div>
+      <div class="equity-grid">
+        <div class="equity-card"><strong>63.2pp</strong><span>Education gap</span></div>
+        <div class="equity-card"><strong>61.2pp</strong><span>Wealth gap</span></div>
+        <div class="equity-card"><strong>53.3pp</strong><span>Geopolitical-zone gap</span></div>
+        <div class="equity-card"><strong>30.0pp</strong><span>Residence gap</span></div>
+      </div>
+      <p class="case-note"><strong>Interpretation:</strong> national coverage improvement alone would not guarantee equitable continuity of care.</p>
+    </div>
+  </article>
+
+  <article class="finding">
+    <div><span class="finding-label">03 / Geography</span><h3>State-level completion ranges from 72.7% to 3.3%.</h3></div>
+    <div><p>In the public reporting output, complete-continuum coverage ranged from <strong>72.7% in Lagos</strong> to <strong>3.3% in Kebbi</strong>.</p><p class="case-note"><strong>Interpretation:</strong> the geographic spread is large enough that programme design and monitoring should not rely on national averages alone.</p></div>
+  </article>
+
+  <article class="finding">
+    <div><span class="finding-label">04 / Adjusted associations</span><h3>Education and wealth remain strongly associated with completion.</h3></div>
+    <div><p>In the adjusted survey-weighted model, higher education had an adjusted odds ratio of <strong>6.32</strong> versus no education, while the richest wealth quintile had an adjusted odds ratio of <strong>6.31</strong> versus the poorest quintile.</p><p class="case-note"><strong>Important:</strong> these are associations from cross-sectional data and should not be interpreted as causal effects.</p></div>
+  </article>
+
+  <article class="finding">
+    <div><span class="finding-label">05 / Sensitivity</span><h3>The story holds under stricter definitions.</h3></div>
+    <div><p>Replacing ANC4 with ANC8 reduced continuum prevalence to <strong>11.0%</strong>. Replacing skilled birth with facility delivery produced a prevalence of <strong>24.6%</strong>.</p><p class="case-note"><strong>Interpretation:</strong> the headline conclusion is not dependent on a single operational definition.</p></div>
+  </article>
+</div></section>
+
+<section class="section section-dark"><div class="container case-grid">
+  <div><p class="section-kicker">Quality & governance</p><h2>Reproducibility is part of the analysis, not an afterthought.</h2></div>
+  <div class="case-body">
+    <p style="color:#c0cbd2">The final R reconciliation reported 0 missing required analytical files, 0 invalid national estimates or CI-ordering problems, 37 state/FCT units represented, 296/296 expected state-indicator estimates generated and 0 critical historical QA failures.</p>
+    <p style="color:#c0cbd2">Respondent-level NDHS microdata are not distributed. Public reporting uses validated aggregate outputs, with small-cell suppression and caution rules applied before version control.</p>
+  </div>
+</div></section>
+
+<section class="section cta"><div class="container cta-grid">
+  <div><p class="section-kicker">Inspect the work</p><h2>The full analytical workflow is documented.</h2><p>The repository contains the R pipeline, PostgreSQL architecture, QA, safe aggregate outputs, PBIP source, methods documentation and reproducibility notes.</p></div>
+  <div class="hero-actions"><a class="btn btn-gold" href="https://github.com/opeyemiagboolabethel/maternal-continuum-nigeria-2024" target="_blank" rel="noopener">Open repository ↗</a><a class="btn btn-light-outline" href="../index.html#contact">Contact me</a></div>
+</div></section>
+</main>
+
+<footer class="footer"><div class="container footer-row"><div>© <span data-year></span> Opeyemi O. Agboola</div><div class="footer-links"><a href="../index.html">Portfolio home</a><a href="mailto:opeyemiagboola50@gmail.com">Email</a></div></div></footer>
+<script src="../js/main.js" defer></script>
+</body>
+</html>
