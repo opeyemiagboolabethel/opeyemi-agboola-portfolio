@@ -18,3 +18,4 @@ Cloudflare Pages:
 - Build command: `exit 0`
 - Build output directory: `.`
 - Production branch: `main`
+Continuous deployment: GitHub main → Cloudflare Workers.
