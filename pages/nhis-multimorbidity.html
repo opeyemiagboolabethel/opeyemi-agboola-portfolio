@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>NHIS Multimorbidity & Socioeconomic Inequality | Opeyemi O. Agboola</title>
+<meta name="description" content="Survey-weighted R analysis of socioeconomic inequality and multimorbidity across adulthood using the 2024 National Health Interview Survey."/>
+<meta name="theme-color" content="#071726"/>
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../css/styles.css"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="../index.html"><strong>Opeyemi O. Agboola, MPH, MBA</strong><span>Health Data · Research · Decision Intelligence</span></a>
+    <nav class="desktop-nav" aria-label="Primary"><a href="../index.html#work">Work</a><a href="../index.html#expertise">Expertise</a><a href="../index.html#profile">About</a><a href="../index.html#focus">Focus</a></nav>
+    <div class="nav-actions"><a class="btn btn-dark-outline btn-small" href="../assets/docs/Opeyemi_Agboola_CV.docx">Download CV ↓</a></div>
+    <button class="menu-toggle" data-menu-toggle aria-expanded="false" aria-label="Open menu"><span></span><span></span></button>
+  </div>
+  <nav class="mobile-nav" data-mobile-nav aria-label="Mobile"><a href="../index.html#work">Work</a><a href="../index.html#expertise">Expertise</a><a href="../index.html#profile">About</a><a href="../index.html#focus">Focus</a></nav>
+</header>
+
+<main>
+<section class="case-hero">
+  <div class="container">
+    <a class="case-back" href="../index.html#work">← Back to selected work</a>
+    <p class="eyebrow" style="margin-top:28px">Population health · quantitative sociology · United States</p>
+    <h1>Socioeconomic Stratification and Multimorbidity Across Adulthood</h1>
+    <p class="hero-lede">A reproducible quantitative health-sociology project using the 2024 National Health Interview Survey to examine how education and family poverty are associated with multimorbidity across stages of adulthood.</p>
+    <div class="case-meta"><span>2024 NHIS</span><span>32,629 Sample Adult respondents</span><span>R</span><span>Complex survey analysis</span><span>Multiple imputation</span><span>Survey-weighted regression</span></div>
+  </div>
+</section>
+
+<section class="section section-white"><div class="container case-grid">
+  <div><p class="section-kicker">Research problem</p><h2>Chronic-condition burden is not only age-patterned. It is socially patterned.</h2></div>
+  <div class="case-body">
+    <p>Multimorbidity is often presented as an aging problem, but chronic-condition accumulation also varies across socioeconomic position. The analytical challenge was to quantify education and poverty gradients while respecting the NHIS complex sample design and the CDC's multiply imputed income data.</p>
+    <p>The project asks how socioeconomic disadvantage is associated with multimorbidity among U.S. adults and whether the education gradient varies across adulthood.</p>
+    <p class="case-note"><strong>Primary outcome:</strong> two or more of 12 chronic physical or mental health conditions. A physical-only definition is included as a sensitivity analysis.</p>
+  </div>
+</div></section>
+
+<section class="section section-dark"><div class="container">
+  <p class="section-kicker">Executive view</p><h2 class="display">Multimorbidity is common, and socioeconomic gradients remain after adjustment.</h2>
+  <div class="kpi-grid">
+    <div class="kpi"><strong>37.7%</strong><span>Weighted multimorbidity prevalence</span></div>
+    <div class="kpi"><strong>1.73</strong><span>Adjusted OR: &lt;high school vs bachelor+</span></div>
+    <div class="kpi"><strong>17pp</strong><span>Approx. education gap at ages 50–64</span></div>
+    <div class="kpi"><strong>2.08</strong><span>Adjusted OR: &lt;100% vs 400%+ FPL</span></div>
+  </div>
+</div></section>
+
+<section class="section"><div class="container">
+  <p class="section-kicker">Analytical architecture</p><h2 class="display">A reproducible survey-statistics workflow from official microdata to defensible results.</h2>
+  <div class="arch">
+    <div><b>01</b><strong>Download official CDC/NCHS public-use files</strong></div>
+    <div><b>02</b><strong>Recode outcomes, socioeconomic measures and covariates</strong></div>
+    <div><b>03</b><strong>Apply NHIS weights, strata and pseudo-PSUs</strong></div>
+    <div><b>04</b><strong>Fit weighted models and pool 10 income imputations</strong></div>
+    <div><b>05</b><strong>QA, sensitivity analysis and publication-style outputs</strong></div>
+  </div>
+</div></section>
+
+<section class="section section-white"><div class="container">
+  <p class="section-kicker">Findings</p><h2 class="display">The socioeconomic gradient changes across adulthood.</h2>
+
+  <article class="finding">
+    <div><span class="finding-label">01 / Education × age</span><h3>Educational inequality was not constant across adulthood.</h3><p class="case-note">The joint interaction test was significant: F = 5.06, p &lt; 0.001.</p></div>
+    <div><img class="case-figure" src="../assets/images/nhis-multimorbidity-age-education.png" alt="Multimorbidity prevalence by age group and educational attainment" loading="lazy"/><p>Among adults aged 50–64, estimated prevalence was 51.9% for those with less than high school education and 34.9% for those with a bachelor's degree or higher.</p></div>
+  </article>
+
+  <article class="finding">
+    <div><span class="finding-label">02 / Condition profile</span><h3>The composition of chronic-condition burden changes markedly with age.</h3></div>
+    <div><img class="case-figure" src="../assets/images/nhis-condition-heatmap.png" alt="Heatmap of chronic condition prevalence by age group" loading="lazy"/><p>Hypertension, arthritis, cancer, diabetes and heart disease rose strongly with age, while diagnosed anxiety and depression were more prevalent in younger adults.</p></div>
+  </article>
+
+  <article class="finding">
+    <div><span class="finding-label">03 / Adjusted associations</span><h3>Education and family poverty retained substantial adjusted associations.</h3></div>
+    <div><img class="case-figure" src="../assets/images/nhis-adjusted-odds-ratios.png" alt="Adjusted odds ratios for multimorbidity" loading="lazy"/><p>Adults with less than high school education had adjusted odds 1.73 times those with a bachelor's degree or higher. Adults below 100% of the federal poverty level had adjusted odds 2.08 times those at 400%+ FPL after pooling all 10 income imputations.</p></div>
+  </article>
+</div></section>
+
+<section class="section section-dark"><div class="container case-grid">
+  <div><p class="section-kicker">Methods &amp; interpretation</p><h2>Complex survey design and uncertainty are treated as part of the analysis.</h2></div>
+  <div class="case-body">
+    <p style="color:#c0cbd2">The workflow uses the final annual Sample Adult weight, pseudo-PSU and pseudo-stratum; survey-weighted descriptive estimates; logistic and quasi-Poisson models; an education-by-age interaction; a physical-only sensitivity analysis; and Rubin's rules to pool the 10 CDC income imputations.</p>
+    <p style="color:#c0cbd2">The study is cross-sectional. Results are associations, not causal effects or within-person life-course trajectories. Odds ratios are not interpreted as risk ratios, and race/ethnicity coefficients are treated as descriptive adjusted associations rather than biological effects.</p>
+  </div>
+</div></section>
+
+<section class="section cta"><div class="container cta-grid">
+  <div><p class="section-kicker">Inspect the work</p><h2>The full R workflow is public and reproducible.</h2><p>The repository contains the analysis plan, variable dictionary, reproducibility notes, QA logs, machine-readable result tables, figures and the complete R pipeline.</p></div>
+  <div class="hero-actions"><a class="btn btn-gold" href="https://github.com/opeyemiagboolabethel/nhis-multimorbidity-socioeconomic-inequality" target="_blank" rel="noopener">Open repository ↗</a><a class="btn btn-light-outline" href="../index.html#contact">Contact me</a></div>
+</div></section>
+</main>
+
+<footer class="footer"><div class="container footer-row"><div>© <span data-year></span> Opeyemi O. Agboola</div><div class="footer-links"><a href="../index.html">Portfolio home</a><a href="mailto:opeyemiagboola50@gmail.com">Email</a></div></div></footer>
+<script src="../js/main.js" defer></script>
+</body>
+</html>

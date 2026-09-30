@@ -1,4 +1,4 @@
-# Opeyemi O. Agboola — Professional Portfolio V3
+# Opeyemi O. Agboola — Professional Portfolio V4
 
 Personal portfolio for health data analytics, public-health research, decision intelligence, consulting and remote professional opportunities.
 
@@ -7,10 +7,20 @@ Personal portfolio for health data analytics, public-health research, decision i
 - Public Health Researcher
 - Analytics Consultant
 
+## Current selected work
+### Health & Public Health Analytics
+- Maternal Continuum of Care in Nigeria
+- Socioeconomic Stratification and Multimorbidity Across Adulthood in the United States
+
+### Business & Commercial Analytics
+- Revenue Intelligence — ONE Light Analytics demonstration study
+- Nigeria Broadband Market & Growth Intelligence — ONE Light Analytics demonstration study
+
 ## Portfolio principles
-- Uses the original professional headshot without AI alteration.
-- Publishes completed work as completed and clearly labels work in development.
-- Current-focus content replaces abandoned or unpublished paper claims.
+- Health analytics remains the primary professional track.
+- Only completed work is shown in the selected-work section.
+- Selected commercial studies demonstrate analytical breadth without displacing the health-data positioning.
+- The original professional headshot is used without AI alteration.
 - ONE Light Analytics is linked as the current consulting platform.
 
 ## Deployment
