@@ -1,27 +1,25 @@
-# Opeyemi O. Agboola — Professional Portfolio V4
+# Opeyemi O. Agboola Portfolio — V6
 
-Personal portfolio for health data analytics, public-health research, decision intelligence, consulting and remote professional opportunities.
+Application-ready personal portfolio with a scalable architecture across Data Analytics, Data Science and AI Engineering.
 
 ## Positioning
 - Health Data Analyst
+- Data Scientist
+- AI Engineer
 - Public Health Researcher
-- Analytics Consultant
+- Founder & Lead Consultant, ONE Light Analytics
 
-## Current selected work
-### Health & Public Health Analytics
-- Maternal Continuum of Care in Nigeria
-- Socioeconomic Stratification and Multimorbidity Across Adulthood in the United States
+## Work architecture
+Case studies can be filtered by capability track and by domain. The portfolio currently presents fifteen case-study directions spanning Health & Public Health, Business & Commercial, and Research & Decision Intelligence. Completed projects retain live case-study and GitHub links; additional case studies can be activated progressively as their repositories and outputs are completed.
 
-### Business & Commercial Analytics
-- Revenue Intelligence — ONE Light Analytics demonstration study
-- Nigeria Broadband Market & Growth Intelligence — ONE Light Analytics demonstration study
-
-## Portfolio principles
-- Health analytics remains the primary professional track.
-- Only completed work is shown in the selected-work section.
-- Selected commercial studies demonstrate analytical breadth without displacing the health-data positioning.
-- The original professional headshot is used without AI alteration.
-- ONE Light Analytics is linked as the current consulting platform.
+## Interaction
+- capability and domain filtering
+- scroll reveal transitions
+- sticky filtering controls on desktop
+- scroll progress indicator
+- responsive navigation
+- contact form via Web3Forms
+- subtle desktop card pointer motion with reduced-motion accessibility support
 
 ## Deployment
-Static HTML/CSS/JS site deployed from GitHub `main` to Cloudflare Workers Static Assets.
+Static site intended for GitHub `main` → Cloudflare Workers Static Assets.
