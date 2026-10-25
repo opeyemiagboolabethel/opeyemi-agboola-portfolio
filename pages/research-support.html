@@ -63,10 +63,10 @@
 @media(max-width:530px){
 .hero{grid-template-columns:1fr;gap:12px}
 .hero h1{font-size:39px}
-.photo{display:flex;align-items:center;gap:13px;max-width:none;width:100%}
-.photo img{width:100px;height:auto;max-height:110px;object-fit:contain}
-.photo b{margin:0;font-size:12px}
-.photo small{margin:0}
+.photo{display:grid;grid-template-columns:100px 1fr;grid-template-rows:auto auto;align-items:center;gap:4px 13px;max-width:none;width:100%}
+.photo img{grid-row:1/3;grid-column:1;width:100px;height:auto;max-height:115px;object-fit:contain}
+.photo b{grid-column:2;grid-row:1;align-self:end;margin:0;font-size:13px}
+.photo small{grid-column:2;grid-row:2;align-self:start;margin:0}
 .price-section{padding:33px 0}
 .price-heading{display:block}.price-heading p{text-align:left;margin:7px 0 0}
 .price-card{display:flex}
