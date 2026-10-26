@@ -1,15 +1,31 @@
-
 const toggle = document.querySelector('[data-menu-toggle]');
 const mobile = document.querySelector('[data-mobile-nav]');
 if (toggle && mobile) {
-  toggle.addEventListener('click', () => {
-    const isOpen = mobile.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', String(isOpen));
+  mobile.id = mobile.id || 'mobile-navigation';
+  toggle.setAttribute('aria-controls', mobile.id);
+  const cvLink = document.querySelector('.nav-actions a');
+  if (cvLink) mobile.append(cvLink.cloneNode(true));
+  const setMenuOpen = (open) => {
+    mobile.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    mobile.inert = !open;
+  };
+  setMenuOpen(false);
+  toggle.addEventListener('click', () => setMenuOpen(toggle.getAttribute('aria-expanded') !== 'true'));
+  mobile.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenuOpen(false)));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+      setMenuOpen(false);
+      toggle.focus();
+    }
   });
-  mobile.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    mobile.classList.remove('open');
-    toggle.setAttribute('aria-expanded','false');
-  }));
+  document.addEventListener('click', event => {
+    if (!mobile.contains(event.target) && !toggle.contains(event.target)) setMenuOpen(false);
+  });
+  window.matchMedia('(min-width:981px)').addEventListener('change', event => {
+    if (event.matches) setMenuOpen(false);
+  });
 }
 document.querySelectorAll('[data-year]').forEach(el => {
   el.textContent = new Date().getFullYear();
@@ -143,3 +159,4 @@ if (contactForm && formStatus) {
 
   updateCards();
 })();
+
